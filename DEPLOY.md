@@ -89,7 +89,7 @@ Dockerfile 里对每个 shell 脚本都跑了 `bash -n`，语法错误会在构�
 **不要复用旧容器的 `CF_TUNNEL_TOKEN`。** 同一个 token 在两台机器上连接等于同一条
 tunnel 的两个副本，Cloudflare 会把请求随机分给其中一个，域名会串台。要对外访问就在
 CF 控制台新建一条 tunnel + 新 hostname，把新 token 填进来；不需要就留空，7860 状态页
-和 9100 段的 Dashboard 已经够用。
+和 `HERMES_DASHBOARD_PORT`（默认 9119）的 Dashboard 已经够用。
 
 ---
 
